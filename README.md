@@ -84,13 +84,18 @@ In the command box, erase “–O” and type “–sV” and press enter to beg
 
 ![9](https://user-images.githubusercontent.com/121040101/228098160-8acfec3f-2a86-43f0-ac32-1b3fc5d19ff3.PNG)
 
-One the left pane, click “fileserver01” and then “Port/Hosts” tab to display the ports and services detected by the Service scan.
+One the left pane, click “fileserver01” and then “Port/Hosts” tab to display the ports and services and version detected by the Service scan.
 
 ![10](https://user-images.githubusercontent.com/121040101/228098216-f10a8aef-c756-4296-bee7-f470ef2c9bc0.PNG)
 
-Click "host detail"
+# How to save my scans
 
+If you want to save scans that you conducted on Nmap, click scan menu and select save all scans to directory.
 
+![11](https://user-images.githubusercontent.com/121040101/228100272-ce61ddfd-7f66-4087-97eb-c1b59f6cbde0.PNG)
 
-Next, I will click scan menu and select save all scans to directory.
+On the desktop folder, I will create a folder name “namp result” and save it there.
 
+![12](https://user-images.githubusercontent.com/121040101/228100309-1dee2e3d-57f7-4a7e-9fdc-1331dfefdcc7.PNG)
+
+This concludes this lab.
