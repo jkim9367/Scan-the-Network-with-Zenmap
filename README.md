@@ -15,3 +15,8 @@ First open Nmap - Zenmap GUI icon
 
 ![1](https://user-images.githubusercontent.com/121040101/228093003-c0532125-c3c9-4a52-bbf4-00caaff4aa0f.PNG)
 
+In the Zenmap, type “172.30.0.0/24”
+In the target field to specify the 172.30.0.0/24 subnet as the scan target.
+And in the profile menu, select Ping scan.
+
+![2](https://user-images.githubusercontent.com/121040101/228093104-6c982773-351b-4b4f-b4e4-e9d87e47da65.PNG)
