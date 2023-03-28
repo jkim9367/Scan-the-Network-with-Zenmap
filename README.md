@@ -34,7 +34,7 @@ The Ping scan confirms that the machine is available and identified the host nam
 
 BUT, it cannot identify ports, operating systems, or services.
 
-# SYN scan
+# SYN scan to find open ports
 In next step, I will conduct SYN scan. The SYN scan is form of TCP scan that is unintrusive to the target host, this is why it is also called “stealth scan”. In the SYN scan, it first creates a TCP packet with the SYN flag set and then sent to the specific port of the target (during TCP handshake, this would be first step in the three step). When target receives the SYN flag, there is 2 way of response from the target. 
 
 1) If port is open, target sends back ACK flag
@@ -52,13 +52,41 @@ After completed the scan, click “fileserver01” and then click “Ports/Host�
 
 ![6](https://user-images.githubusercontent.com/121040101/228095329-a615fcfb-bcce-4c1d-bb12-400c61064e29.PNG)
 
-In this SYN scan, I was able to identify the open ports and services running on the ports of the FileServer01, but not able to see the versions of the services. I will do that next step.
+In this SYN scan, I was able to identify the open ports and services running on the ports of the FileServer01, but not able to see the OS. I will do that next step.
 
-# Scanning to find the versions of the services
+# Operating System detection scan
 
 In the next step, I will run another scan using a single Nmap switch. This time, I will use –o switch, which invokes an operating system detection scan.
+
+This scan can guess the OS of each host. This is possible because each OS responds to specific network packets in unique ways. Nmap OS detection examine the responses and compare with the database with more than 2,600 known OS fingerprints and also find which version it is.
+
+BUT this is not 100% accurate.
 
 In the command box, erase “–sS” then type “–o” and press enter to begin an OS detection scan on the network
 
 ![7](https://user-images.githubusercontent.com/121040101/228095858-48a32ef3-128e-42b8-8c82-a5e06d8f6db6.PNG)
+
+On the left pane, click the “pfSense-office”, then click host details tab to see an organized summary of the information about the host detected during the scan.
+
+![8](https://user-images.githubusercontent.com/121040101/228096869-a4917a84-45f8-4fee-a84e-e4ab6b41281f.PNG)
+
+The Nmap have determined that the OS is FreeBSD 11.2 with accuracy of 86%.
+
+In the earlier SYN scan, Nmap identified the services running on the machines, but not the versions. In the next step, I will use the “–sV” switch to run service scan, which will attempt to identify the versions of the software running on open TCP ports.
+ 
+ # Service scan
+ 
+In the Service scan, Nmap sends packets to an open port and analyzes the response. The services’ responses will response with banner information that identifies the service and version. This scan can make more accurate guess of the OS types because of the additional information.
+
+BUT this scan can take longer than previous scans.
+
+In the command box, erase “–O” and type “–sV” and press enter to begin a Service scan on the network
+
+![9](https://user-images.githubusercontent.com/121040101/228098160-8acfec3f-2a86-43f0-ac32-1b3fc5d19ff3.PNG)
+
+One the left pane, click “fileserver01” and then “Port/Hosts” tab to display the ports and services detected by the Service scan.
+
+![10](https://user-images.githubusercontent.com/121040101/228098216-f10a8aef-c756-4296-bee7-f470ef2c9bc0.PNG)
+
+Next, I will click scan menu and select save all scans to directory.
 
