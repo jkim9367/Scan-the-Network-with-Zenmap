@@ -88,5 +88,9 @@ One the left pane, click “fileserver01” and then “Port/Hosts” tab to dis
 
 ![10](https://user-images.githubusercontent.com/121040101/228098216-f10a8aef-c756-4296-bee7-f470ef2c9bc0.PNG)
 
+Click "host detail"
+
+
+
 Next, I will click scan menu and select save all scans to directory.
 
