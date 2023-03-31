@@ -98,4 +98,4 @@ On the desktop folder, I will create a folder name “namp result” and save it
 
 ![12](https://user-images.githubusercontent.com/121040101/228100309-1dee2e3d-57f7-4a7e-9fdc-1331dfefdcc7.PNG)
 
-This concludes this lab.
+This concludes the lab.
